@@ -1,0 +1,275 @@
+Project,Group,File (.java),Method/Field,Line,Warning,Source,Reason
+compile-testing,Baseline,CompilationSubject,findLineContainingSubstring,527,False positive,IDE,Nullable variable checked to be non-null
+compile-testing,Baseline,CompilationSubjectFactory,createSubject,27,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,Compiler,getPlatformClassLoader,233,False positive,IDE,Null return from unannotated method
+compile-testing,Baseline,Compiler,getClasspathFromClassloader,254,True positive,IDE,Unsafe dereference with external code
+compile-testing,Baseline,Compiler,getClasspathFromClassloader,255,True positive,IDE,Unsafe dereference with external code
+compile-testing,Baseline,InMemoryJavaFileManager,load,60,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,JavaFileObjects,openStream,177,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,JavaFileObjectSubject,actualCustomStringRepresentation,65,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,JavaFileObjectSubjectFactory,createSubject,28,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,JavaSourcesSubjectFactory,createSubject,38,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,JavaSourceSubjectFactory,createSubject,38,False positive,IDE,Unannotated override of external code
+compile-testing,Baseline,MoreTrees,absentIfNull,175,False positive,IDE,Optional compared with null
+compile-testing,Experimental,Breadcrumbs,getBreadcrumbList,65,False positive,IDE,Passing nullable to unannotated code
+compile-testing,Experimental,CompilationRule,elements,52,False positive,Both,Late-init non-null field
+compile-testing,Experimental,CompilationRule,types,53,False positive,Both,Late-init non-null field
+compile-testing,Experimental,CompilationRule,thrown,91,False positive,IDE,Late-init non-null field
+compile-testing,Experimental,CompilationSubject,lines,448,False positive,Both,Late-init non-null field
+compile-testing,Experimental,CompilationSubject,findLineContainingSubstring,529,False positive,NA,Nullable variable checked to be non-null
+compile-testing,Experimental,Compiler,getClasspathFromClassloader,254,True positive,Both,Unsafe dereference with external code
+compile-testing,Experimental,Compiler,getClasspathFromClassloader,255,True positive,Both,Unsafe dereference with external code
+compile-testing,Experimental,MoreTrees,absentIfNull,175,False positive,IDE,Optional compared with null
+guava,Baseline,Absent,orNull,67,False positive,IDE,Null return from unannotated method
+guava,Baseline,AbstractIterator,endOfData,50,False positive,IDE,Null return from unannotated method
+guava,Baseline,AbstractIterator,next,85,False positive,IDE,Null assignment to unannotated variable
+guava,Baseline,CharMatcher,toString,1560,False positive,IDE,Unannotated override of Java API
+guava,Baseline,Converter,correctedDoForward,203,False positive,IDE,Null return from unannotated method
+guava,Baseline,Converter,correctedDoBackward,212,False positive,IDE,Null return from unannotated method
+guava,Baseline,Defaults,defaultValue,64,False positive,IDE,Null return from unannotated method
+guava,Baseline,FinalizableReferenceQueue,loadFinalizer,295,False positive,IDE,Null return from unannotated method
+guava,Baseline,FinalizableReferenceQueue,loadFinalizer,302,False positive,IDE,Null return from unannotated method
+guava,Baseline,FinalizableReferenceQueue,loadFinalizer,309,False positive,IDE,Null return from unannotated method
+guava,Baseline,FinalizableReferenceQueue,loadFinalizer,312,False positive,IDE,Null return from unannotated method
+guava,Baseline,FinalizableReferenceQueue,loadFinalizer,344,False positive,IDE,Null return from unannotated method
+guava,Baseline,MoreObjects,isEmpty,368,False positive,IDE,Nullable variable checked to be non-null
+guava,Baseline,Optional,fromJavaUtil,132,False positive,IDE,Optional compared with null
+guava,Baseline,Optional,fromJavaUtil,132,False positive,IDE,Null return from unannotated method
+guava,Baseline,Optional,toJavaUtil,154,False positive,IDE,Optional compared with null
+guava,Baseline,Optional,toJavaUtil,154,False positive,IDE,Null return from unannotated method
+guava,Baseline,Platform,emptyToNull,79,False positive,IDE,Null return from unannotated method
+guava,Baseline,Predicates,toString,763,False positive,IDE,Unannotated override of Java API
+guava,Baseline,Splitter,iterator,373,False positive,IDE,Unannotated override of Java API
+guava,Experimental,Converter,unsafeDoForward,244,False positive,IDE,Non-null function annotated nullable
+guava,Experimental,Converter,unsafeDoForward,245,True positive,IDE,Passing nullable to non-null
+guava,Experimental,Converter,unsafeDoBackward,248,False positive,IDE,Non-null function annotated nullable
+guava,Experimental,Converter,unsafeDoBackward,249,True positive,IDE,Passing nullable to non-null
+guava,Experimental,Converter,next,283,False positive,Both,Unannotated override of Java API
+guava,Experimental,Converter,apply,469,False positive,Both,Unannotated override of Java API
+guava,Experimental,NullnessCasts,uncheckedCastNullableTToT,56,True positive,NA,Null return from null-marked method
+guava,Experimental,Optional,fromJavaUtil,132,False positive,IDE,Optional compared with null
+guava,Experimental,Optional,fromJavaUtil,132,False positive,IDE,Optional returned as null
+guava,Experimental,Optional,toJavaUtil,154,False positive,IDE,Optional compared with null
+guava,Experimental,Optional,toJavaUtil,154,False positive,IDE,Optional returned as null
+guava,Experimental,Throwables,getRootCause,261,False positive,NA,Nullable variable checked to be non-null
+guava,Experimental,Throwables,getCausalChain,303,False positive,NA,Nullable variable checked to be non-null
+guava,Experimental,Throwables,getCauseAs,324,False positive,IDE,Non-null function annotated nullable
+guava,Experimental,Throwables,invokeAccessibleNonThrowingMethod,441,Uncertain,NA,Passing nullable to non-null
+jsoup,Baseline,CharacterReader,close,71,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,CharacterReader,close,74,Uncertain,IDE,Unsafe null assignment
+jsoup,Baseline,CharacterReader,close,76,Uncertain,IDE,Unsafe null assignment
+jsoup,Baseline,CharacterReader,doBufferUp,122,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,CharacterReader,trackNewLines,173,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,initialiseParser,98,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,initialiseParser,100,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,initialiseParser,101,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,initialiseParser,102,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,getFromStack,490,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,onStackPrunedForDepth,508,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,popStackToClose,528,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,popStackToCloseAnyNamespace,540,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,aboveOnStack,585,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,aboveOnStack,592,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,resetInsertionMode,640,Uncertain,IDE,Unsafe dereference with internal code
+jsoup,Baseline,HtmlTreeBuilder,lastFormattingElement,885,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,removeLastFormattingElement,901,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,firstElementChild,1020,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,popTemplateMode,1062,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,HtmlTreeBuilder,currentTemplateMode,1071,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,StreamParser,resetInsertionMode,316,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,StreamParser,next,338,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,StreamParser,maybeFindNext,364,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tag,textState,327,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TagSet,copyCustomizers,68,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TagSet,get,129,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Token,resetInsertionMode,66,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Token,reset,124,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Token,reset,126,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Token,newAttribute,160,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Token,reset,309,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TokenData,flipToBuilder,59,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TokenData,reset,69,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TokenData,reset,71,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,TokenData,stack,113,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,137,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,139,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,141,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,151,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,192,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,195,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,Tokenizer,consumeCharacterReference,202,False positive,IDE,Null assignment to unannotated variable
+jsoup,Baseline,XmlTreeBuilder,initialiseParseFragment,75,Uncertain,IDE,Unsafe dereference with Java API
+jsoup,Baseline,XmlTreeBuilder,insertElementFor,148,Uncertain,IDE,Unsafe dereference with Java API
+jsoup,Experimental,CharacterReader,close,71,False positive,Both,Null assignment to unannotated variable
+jsoup,Experimental,CharacterReader,close,74,Uncertain,Both,Unsafe null assignment
+jsoup,Experimental,CharacterReader,close,76,Uncertain,Both,Unsafe null assignment
+jsoup,Experimental,CharacterReader,columnNumber,224,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,CharacterReader,scanBufferForNewLines,252,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,HtmlTreeBuilder,state,67,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,originalState,68,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,formattingElements,74,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,tmplInsertMode,75,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,pendingTableCharacters,76,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,emptyFind,77,False positive,IDE,Late-init non-null field
+jsoup,Experimental,HtmlTreeBuilder,initialiseParse,98,False positive,IDE,Null assignment to unannotated variable
+jsoup,Experimental,HtmlTreeBuilder,inSpecificScope,731,False positive,IDE,Nullable variable checked to be non-null
+jsoup,Experimental,HtmlTreeBuilder,getHeadElement,794,False positive,IDE,Null return from unannotated method
+jsoup,Experimental,HtmlTreeBuilder,lastFormattingElement,885,False positive,IDE,Null return from unannotated method
+jsoup,Experimental,HtmlTreeBuilder,removeLastFormattingElement,901,False positive,IDE,Null return from unannotated method
+jsoup,Experimental,HtmlTreeBuilderState,inBodyEndTag,682,Uncertain,NA,Passing nullable to non-null
+jsoup,Experimental,HtmlTreeBuilderState,inBodyEndTag,700,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,anyOtherEndTag,803,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,anyOtherEndTag,811,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,anyOtherEndTag,812,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,anyOtherEndTag,813,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,anyOtherEndTag,815,False positive,NA,Passing nullable to unannotated code
+jsoup,Experimental,HtmlTreeBuilderState,process,1059,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,HtmlTreeBuilderState,process,1495,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,HtmlTreeBuilderState,process,1793,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,HtmlTreeBuilderState,process,1795,Uncertain,NA,Unsafe null assignment
+jsoup,Experimental,Token,newAttribute,160,False positive,IDE,Null assignment to unannotated variable
+jsoup,Experimental,Token,trackAttributeRange,178,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,Token,normalName,218,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,Token,toString,323,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,Token,toString,468,False positive,NA,Nullable variable checked to be non-null
+jsoup,Experimental,TokenData,append,28,False positive,NA,Ignored assert statement
+jsoup,Experimental,TokenData,append,39,False positive,NA,Ignored assert statement
+jsoup,Experimental,TokenData,appendCodePoint,50,False positive,NA,Ignored assert statement
+jsoup,Experimental,Tokeniser,reader,75,False positive,NA,Ignored assert statement
+jsoup,Experimental,TreeBuilder,parser,23,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,reader,24,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,tokeniser,25,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,doc,26,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,stack,27,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,baseUri,28,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,currentToken,29,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,settings,30,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,tagSet,31,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,start,34,False positive,Both,Late-init non-null field
+jsoup,Experimental,TreeBuilder,completeParse,66,False positive,Both,Null assignment to unannotated variable
+jsoup,Experimental,TreeBuilder,completeParse,67,False positive,Both,Null assignment to unannotated variable
+jsoup,Experimental,TreeBuilder,completeParse,68,False positive,Both,Null assignment to unannotated variable
+jsoup,Experimental,TreeBuilder,stepParser,113,False positive,IDE,Null assignment to unannotated variable
+jsoup,Experimental,TreeBuilder,error,243,False positive,NA,Passing nullable to unannotated code
+log4j-core,Baseline,AbstractLogEvent,getContextData,46,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getLevel,56,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getLoggerFqcn,61,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getLoggerName,65,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getMarker,70,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getMessage,75,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getSource,80,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,peekSource,86,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getThreadName,96,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,AbstractLogEvent,getThrown,106,Uncertain,IDE,Null return from null-marked method
+log4j-core,Baseline,ContextDataFactory,createDefaultConstructor,73,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,ContextDataFactory,createDefaultConstructor,78,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,ContextDataFactory,createInitialCapacityConstructor,84,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,ContextDataFactory,createInitialCapacityConstructor,89,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,JdkMapAdapterStringMap,clear,161,False positive,IDE,Lazy-init non-null field
+log4j-core,Baseline,JdkMapAdapterStringMap,putAll,178,False positive,IDE,Lazy-init non-null field
+log4j-core,Baseline,JdkMapAdapterStringMap,putValue,188,False positive,IDE,Lazy-init non-null field
+log4j-core,Baseline,JdkMapAdapterStringMap,remove,198,False positive,IDE,Lazy-init non-null field
+log4j-core,Baseline,Log4jContextFactory,addShutdownCallback,430,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,Log4jLogEvent,getSource,491,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,Logger,getParent,96,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,Logger,isEnabled,162,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,167,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,172,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,177,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,182,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,187,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,193,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,204,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,216,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,229,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,243,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,258,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,274,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,291,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,309,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,314,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,isEnabled,319,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,Logger,atLevel,424,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,LoggerContext,doLog,151,False positive,IDE,Unannotated override of annotated code
+log4j-core,Baseline,LoggerContext,fileToUri,163,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,LoggerContext,stop,434,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MementoMessage,getThrowable,68,False positive,IDE,Null return from unannotated method
+log4j-core,Baseline,MutableLogEvent,clear,126,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,127,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,128,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,129,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,130,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,133,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,138,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,140,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,clear,141,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Baseline,MutableLogEvent,getParameters,256,False positive,IDE,Unannotated override of Java API
+log4j-core,Baseline,ThreadContextDataInjector,getValue,83,False positive,IDE,Null return from unannotated method
+log4j-core,Experimental,AbstractFilter,AbstractFilter,100,False positive,NA,Nullable variable checked to be non-null
+log4j-core,Experimental,AbstractLogEvent,getContextData,46,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getLevel,56,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getLoggerFqcn,61,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getLoggerName,65,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getMarker,70,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getMessage,75,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getSource,80,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,peekSource,86,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getThreadName,96,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,AbstractLogEvent,getThrown,106,Uncertain,IDE,Null return from null-marked method
+log4j-core,Experimental,ContextDataFactory,CACHED_CLASS,47,False positive,NA,Null assignment to unannotated variable
+log4j-core,Experimental,ContextDataFactory,createDefaultConstructor,73,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,ContextDataFactory,createDefaultConstructor,78,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,ContextDataFactory,createInitialCapacityConstructor,84,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,ContextDataFactory,createInitialCapacityConstructor,89,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,CoreProperties,defaultValue,145,Uncertain,NA,Passing nullable to non-null
+log4j-core,Experimental,JdkMapAdapterStringMap,JdkMapAdapterStringMap,62,False positive,NA,Lazy-init non-null field
+log4j-core,Experimental,JdkMapAdapterStringMap,JdkMapAdapterStringMap,91,False positive,NA,Lazy-init non-null field
+log4j-core,Experimental,JdkMapAdapterStringMap,getValue,141,False positive,NA,Null return from unannotated method
+log4j-core,Experimental,JdkMapAdapterStringMap,clear,161,False positive,Both,Lazy-init non-null field
+log4j-core,Experimental,JdkMapAdapterStringMap,putAll,178,False positive,Both,Lazy-init non-null field
+log4j-core,Experimental,JdkMapAdapterStringMap,putValue,188,False positive,Both,Lazy-init non-null field
+log4j-core,Experimental,JdkMapAdapterStringMap,remove,198,False positive,Both,Lazy-init non-null field
+log4j-core,Experimental,Log4jContextFactory,addShutdownCallback,430,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,Log4jLogEvent,Builder,87,True positive,NA,Non-null field initialized to null
+log4j-core,Experimental,Log4jLogEvent,Builder,114,False positive,NA,Null assignment to unannotated variable
+log4j-core,Experimental,Log4jLogEvent,Log4jLogEvent,286,False positive,NA,Null assignment to unannotated variable
+log4j-core,Experimental,Log4jLogEvent,getSource,493,False positive,NA,Null return from unannotated method
+log4j-core,Experimental,Log4jProvider,getLoggerContextFactory,103,False positive,IDE,Unannotated override of external code
+log4j-core,Experimental,Log4jProvider,getThreadContextMapInstance,123,False positive,IDE,Unannotated override of external code
+log4j-core,Experimental,Logger,getParent,96,False positive,Both,Null return from unannotated method
+log4j-core,Experimental,Logger,getParent,96,False positive,IDE,Null return from unannotated method
+log4j-core,Experimental,Logger,isEnabled,162,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,163,False positive,Both,Passing nullable to unannotated code
+log4j-core,Experimental,Logger,isEnabled,167,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,172,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,177,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,182,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,187,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,193,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,204,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,216,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,229,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,243,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,258,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,274,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,291,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,309,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,314,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,isEnabled,319,False positive,Both,Unannotated override of annotated code
+log4j-core,Experimental,Logger,name,809,True positive,Both,Non-null field initialized to null
+log4j-core,Experimental,LoggerContext,fileToUri,163,False positive,IDE,Null return from unannotated method
+log4j-core,Experimental,LoggerContext,stop,434,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MementoLogEvent,getThrowable,69,False positive,NA,Null return from unannotated method
+log4j-core,Experimental,MementoLogEvent,getSource,159,False positive,NA,Null return from unannotated method
+log4j-core,Experimental,MementoMessage,getThrowable,68,False positive,IDE,Null return from unannotated method
+log4j-core,Experimental,MutableLogEvent,clear,126,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,127,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,128,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,129,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,130,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,133,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,138,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,140,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,clear,141,False positive,IDE,Null assignment to unannotated variable
+log4j-core,Experimental,MutableLogEvent,getParameters,256,False positive,IDE,Unannotated override of Java API
+log4j-core,Experimental,ThreadContextDataInjector,getValue,83,False positive,IDE,Null return from unannotated method
