@@ -1,4 +1,4 @@
-# Software Analysis Project Notes
+# Software Analysis Project Warnings
 
 ## General
 
@@ -9,9 +9,7 @@
 - Ignoring assert statements for NullAway (not always supported in runtime)
 - Must compile from clean build (not incremental) to raise all warnings
 
-## Reasons
-
-### Warning Types
+### Warning Reasons
 
 - False positive warnings will not lead to an NPE assuming correct annotation
 - True positive warnings will lead to an NPE without additional code fixes
@@ -33,16 +31,16 @@
     - Getter methods may re-initialize null fields
 - Non-null fields initialized to null: **true positive**
 
-### Language Features
+### Method Signatures
 
-- `Optional<T>` compared with null: **true positive** (unless intended)
-- `Optional<T>` returned as null: **true positive** (unless intended)
-- Unchecked cast to non-null type: **true positive**
+- Overridden method from null-marked or unannotated internal/external/Java API code not annotated as
+  `@Nullable`: **false positive**
+    - May happen with parameters or return type
 
 ### Null Assignments
 
 - Null assignment to variable dereferenced later after check: **false positive**
-  - Raised when nullable fields not annotated `@Nullable`
+    - Raised when nullable fields not annotated `@Nullable`
 - Null assignment to variable dereferenced later without check: **true positive**
 
 ### Null Dereferences
@@ -59,18 +57,7 @@
 - Null-marked function returns null: **true positive**
     - Tends to happen in abstract classes or overrides
 
-### Signature
+### Optionals
 
-- Overridden method from null-marked or unannotated internal/external/Java API code not annotated as
-  `@Nullable`: **false positive**
-  - May happen with parameters or return type
-
-## Observations
-
-- HTML parser must track state, so many nullable fields
-- Better to keep another variable to check property null state
-- Needing getters and null checks for every variable seems verbose
-- Not too many true positives found either way
-- Thorough annotation reduces false positives (and total warnings) from all sources
-- Backwards compatibility may require otherwise unsafe code
-- Builder pattern frequently leaves some fields uninitialized
+- `Optional<T>` compared with null: **true positive** (unless intended)
+- `Optional<T>` returned as null: **true positive** (unless intended)

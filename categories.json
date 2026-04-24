@@ -1,0 +1,37 @@
+{
+  "Assertions": [
+    "Ignored assert statement",
+    "Nullable variable checked to be non-null"
+  ],
+  "Fields": [
+    "Late-init non-null field",
+    "Lazy-init non-null field",
+    "Non-null field initialized to null"
+  ],
+  "Null Assignments": [
+    "Null assignment to unannotated variable",
+    "Unsafe null assignment"
+  ],
+  "Null Dereferences": [
+    "Passing nullable to unannotated code",
+    "Passing nullable to non-null",
+    "Unsafe dereference with external code",
+    "Unsafe dereference with internal code",
+    "Unsafe dereference with Java API"
+  ],
+  "Null Returns": [
+    "Method returns non-null or exception",
+    "Null return from null-marked method",
+    "Null return from unannotated method"
+  ],
+  "Optionals": [
+    "Optional compared with null",
+    "Optional returned as null"
+  ],
+  "Signatures": [
+    "Non-null function annotated nullable",
+    "Unannotated override of annotated code",
+    "Unannotated override of external code",
+    "Unannotated override of Java API"
+  ]
+}
