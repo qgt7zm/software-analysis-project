@@ -16,6 +16,7 @@
                         <!--or -XepAnnotatedPackages=package1,package2-->
                         -XepOpt:NullAway:JSpecifyMode=true
                         <!--Add -XepOpt:NullAway:AssertsEnabled=true to enable asserts (disabled by default)-->
+                        <!--Add -XepExcludedPaths:.*/test/.* to exclude test code-->
                     </arg>
                     <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
                 </compilerArgs>

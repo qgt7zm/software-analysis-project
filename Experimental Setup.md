@@ -23,12 +23,16 @@ Use this IntelliJ code inspection [configuration file](SWA_Project.xml).
 
 Compile Command: `./gradlew clean <subproject>:compileJava`
 
+Test Command: `./gradlew <subproject>:test`
+
 See this partial [build.gradle.kts](gradle.kts) example.
 
 ### Maven
 
 Compile Command: `./mvnw <—pl subproject> <—am> clean compile`
 (You may need ``--am`` to build submodule dependencies first)
+
+Compile Command: `./mvnw <—pl subproject> test`
 
 See this partial [pom.xml](maven.xml) example and [.mvn/jvm.config](maven.config) file.
 

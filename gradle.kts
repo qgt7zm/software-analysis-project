@@ -10,6 +10,13 @@ tasks.withType<JavaCompile> {
         error("NullAway") // Use warning level
         option("NullAway:JSpecifyMode", "true") // JSpecify support
         // option("NullAway:JSpecifyMode", "true") // Assert statements are ignored by default
+
+        // Disable NullAway on test code
+        if (name.toLowerCase().contains("test")) {
+            options.errorprone {
+                disable("NullAway")
+            }
+        }
     }
 }
 
