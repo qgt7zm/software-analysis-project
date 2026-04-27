@@ -1,39 +1,42 @@
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.15.0</version>
-            <configuration>
-                <compilerArgs>
-                    <arg>-Xlint:all</arg>
-                    <arg>-XDcompilePolicy=simple</arg>
-                    <arg>--should-stop=ifError=FLOW</arg>
-                    <!--Note: Error Prone/NullAway flags need to be in the same arg tag-->
-                    <arg>
-                        -Xplugin:ErrorProne -XepDisableAllChecks -Xep:NullAway:ERROR
-                        -XepOpt:NullAway:OnlyNullMarked
-                        <!--or -XepAnnotatedPackages=package1,package2-->
-                        -XepOpt:NullAway:JSpecifyMode=true
-                        <!--Add -XepOpt:NullAway:AssertsEnabled=true to enable asserts (disabled by default)-->
-                        <!--Add -XepExcludedPaths:.*/test/.* to exclude test code-->
-                    </arg>
-                    <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
-                </compilerArgs>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <!--...-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.15.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                        <arg>-XDcompilePolicy=simple</arg>
+                        <arg>--should-stop=ifError=FLOW</arg>
+                        <!--Note: Error Prone/NullAway flags need to be in the same arg tag-->
+                        <arg>
+                            -Xplugin:ErrorProne -XepDisableAllChecks -Xep:NullAway:ERROR
+                            -XepOpt:NullAway:OnlyNullMarked
+                            <!--or -XepAnnotatedPackages=package1,package2-->
+                            -XepOpt:NullAway:JSpecifyMode=true
+                            <!--Add -XepOpt:NullAway:AssertsEnabled=true to enable asserts (disabled by default)-->
+                            <!--Add -XepExcludedPaths:.*/test/.* to exclude test code-->
+                        </arg>
+                        <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
+                    </compilerArgs>
 
-                <annotationProcessorPaths>
-                    <path>
-                        <groupId>com.google.errorprone</groupId>
-                        <artifactId>error_prone_core</artifactId>
-                        <version>2.48.0</version>
-                    </path>
-                    <path>
-                        <groupId>com.uber.nullaway</groupId>
-                        <artifactId>nullaway</artifactId>
-                        <version>0.13.1</version>
-                    </path>
-                </annotationProcessorPaths>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>com.google.errorprone</groupId>
+                            <artifactId>error_prone_core</artifactId>
+                            <version>2.48.0</version>
+                        </path>
+                        <path>
+                            <groupId>com.uber.nullaway</groupId>
+                            <artifactId>nullaway</artifactId>
+                            <version>0.13.1</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
