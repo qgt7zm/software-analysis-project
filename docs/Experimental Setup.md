@@ -25,11 +25,17 @@ Note: Tool and library versions are latest as of 3 Apr 2026.
     1. Press **Cmd**/**Ctrl** + **Shift** + **R**
     2. Double press **shift** and search for **Replace in Files**
     3. Go to menu bar item **Edit** > **Find** > **Replace in Files**.
+
+   <img src="../images/find_replace.png" alt="Replace in Files popup" width="400">
 2. Select the **Directory tab** and **...** button and include only the desired source directories.
+
+   <img src="../images/find_replace_select_path.png" alt="Select Path popup" width="400">
 3. Alternatively, perform find and replace for individual files:
     1. Press **Cmd**/**Ctrl** + **R**
     2. Double press **Shift** and search for **Replace**
     3. Click the menu bar item **Edit** > **Find** > **Replace**.
+
+   <img src="../images/find_replace_in_file.png" alt="Replace in single file" width="400">
 4. Replace the following annotations:
     1. `@Nullable` with `/*@Nullable*/`
     2. `@NonNull` with `/*@NonNull*/` (may not exist)
@@ -49,14 +55,30 @@ Note: Tool and library versions are latest as of 3 Apr 2026.
     1. Click the menu bar items: **Code** > **Inspect Code...**
     2. Press **Shift** twice to open the search menu and type **Inspect Code...**
     3. **Right click** while editing a source file and go to **Analyze** > **Inspect Code**.
+
+   <img src="../images/inspect_code.png" alt="Code Inspection popup" width="400">
 2. After opening the code inspection menu, create a custom scope (**...** button) to include only the source files of
    the desired packages.
+
+   <img src="../images/inspect_code_scope.png" alt="Code Inspection scope popup" width="400">
 3. Import this code [inspection profile](../config/SWA_Project.xml) under **Configure...** > **Gear icon**.
+
+   <img src="../images/inspect_code_profile.png" alt="Code Inspection Profile popup" width="400">
 
 ## Build System Configuration
 
-If there are multiple pom.xml or build.gradle(.kts) files, only the root build configurations should be modified.
+1. Modify the pom.xml or build.gradle(.kts) file to enable NullAway checks for JSpecify annotations.
+    1. If there are multiple such files, only the root build configurations should be modified.
+2. Create a new Maven/Gradle configuration (see next sections) under the config dropdown > **Edit Configurations...** (
+   recommended)
+    1. You may run the commands directly in the terminal, but IntelliJ will take care of the working directory and JDK
+       version.
+3. If the Maven wrapper checksum is invalid, then remove the `distributionShaXSum=` and `wrapperShaXSum=` lines inside
+   .mvn/wrapper/maven-wrapper.properties or acquire the correct checksum from the repository.
 
+<img src="../images/run_config_list.png" alt="Run configs dropdown" width="400">
+
+<img src="../images/run_config_new.png" alt="New run config" width="400">
 
 ### Maven
 
