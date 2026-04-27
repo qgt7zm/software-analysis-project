@@ -21,7 +21,7 @@ tasks.withType<JavaCompile> {
 }
 
 dependencies {
-    implementation("org.jspecify:jspecify:1.0.0")
+    implementation("org.jspecify:jspecify:1.0.0") // JSpecify should already be provided
     errorprone("com.google.errorprone:error_prone_core:2.48.0")
     errorprone("com.uber.nullaway:nullaway:0.31.1")
 }

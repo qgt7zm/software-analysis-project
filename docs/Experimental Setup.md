@@ -51,7 +51,7 @@ Note: Tool and library versions are latest as of 3 Apr 2026.
     3. **Right click** while editing a source file and go to **Analyze** > **Inspect Code**.
 2. After opening the code inspection menu, create a custom scope (**...** button) to include only the source files of
    the desired packages.
-3. Import this code [inspection profile](../SWA_Project.xml) under **Configure...** > **Gear icon**.
+3. Import this code [inspection profile](../config/SWA_Project.xml) under **Configure...** > **Gear icon**.
 
 ## Build System Configuration
 
@@ -63,13 +63,13 @@ If there are multiple pom.xml or build.gradle(.kts) files, only the root build c
 - Compile Command: `./mvnw <—pl subproject> <—am> clean compile`
     - (You may need ``--am`` to build submodule dependencies first)
 - Test Command: `./mvnw <—pl subproject> test`
-- See this partial [pom.xml](../maven.xml) example and [.mvn/jvm.config](../maven.config) file.
+- See this partial [pom.xml](../config/maven.xml) example and [.mvn/jvm.config](../config/maven.config) file.
 
 ### Gradle (Unused)
 
 - Compile Command: `./gradlew clean <subproject>:compileJava`
 - Test Command: `./gradlew <subproject>:test`
-- See this partial [build.gradle.kts](../gradle.kts) example.
+- See this partial [build.gradle.kts](../config/gradle.kts) example.
 
 ## Running Tests
 

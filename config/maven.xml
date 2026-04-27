@@ -1,5 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <!--...-->
+    <dependencies>
+        <!--JSpecify should already be provided-->
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -7,6 +15,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.15.0</version>
                 <configuration>
+                    <!--NullAway options-->
                     <compilerArgs>
                         <arg>-Xlint:all</arg>
                         <arg>-XDcompilePolicy=simple</arg>
@@ -23,6 +32,7 @@
                         <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
                     </compilerArgs>
 
+                    <!--NullAway + Error Prone compiler plugins-->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>com.google.errorprone</groupId>
