@@ -22,12 +22,20 @@
                         <arg>--should-stop=ifError=FLOW</arg>
                         <!--Note: Error Prone/NullAway flags need to be in the same arg tag-->
                         <arg>
+                            <!--Disable all checks except NullAway-->
                             -Xplugin:ErrorProne -XepDisableAllChecks -Xep:NullAway:ERROR
+                            <!--Use -Xep:NullAway:WARN if test code/examples are still raising warnings-->
+
+                            <!--Only checked null-marked code or desired packages-->
                             -XepOpt:NullAway:OnlyNullMarked
-                            <!--or -XepAnnotatedPackages=package1,package2-->
+                            <!--or -XepOpt:NullAway:AnnotatedPackages=package1,package2-->
+
+                            <!--JSpecify support-->
                             -XepOpt:NullAway:JSpecifyMode=true
                             <!--Add -XepOpt:NullAway:AssertsEnabled=true to enable asserts (disabled by default)-->
-                            <!--Add -XepExcludedPaths:.*/test/.* to exclude test code-->
+
+                            <!--Disable checks on test code-->
+                            -XepExcludedPaths:.*/test/.*
                         </arg>
                         <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
                     </compilerArgs>

@@ -95,4 +95,9 @@ Note: Tool and library versions are latest as of 3 Apr 2026.
 
 ## Running Tests
 
-TODO
+Tip: To run only the added tests, create a run configuration and set **Modify options** > **Add VM options** >
+`-Dtest=<test_class>`.
+
+<img src="../images/test_config.png" alt="Test modify config" width="400">
+
+<img src="../images/test_config_options.png" alt="Test VM options" width="400">
