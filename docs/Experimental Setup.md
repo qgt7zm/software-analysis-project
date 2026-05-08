@@ -95,8 +95,9 @@ Note: Tool and library versions are latest as of 3 Apr 2026.
 
 ## Running Tests
 
-Tip: To run only the added tests, create a run configuration and set **Modify options** > **Add VM options** >
-`-Dtest=<test_class>`.
+Tip: To avoid running the existing tests and run only the added tests, create a run configuration and set 
+**Modify options** > **Add VM options** > `-Dtest=<test_class>`. You may need to compile the main source files
+before running tests.
 
 <img src="../images/test_config.png" alt="Test modify config" width="400">
 
