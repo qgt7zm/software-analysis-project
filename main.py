@@ -63,15 +63,22 @@ if __name__ == "__main__":
         filtered = data.where(data["Project"] == project)
     filtered["Count"] = 1
 
-    # Aggregate by warning and group
-    print("A. Warnings found by group:")
+    # Aggregate by project and reason
+    print("Warnings per project:")
+    print(filtered.groupby(["Project"]).count()["Count"])
+
+    # Aggregate by warning and group (table 2)
+    print("Warnings found by group and source:")
     print(filtered.groupby(["Group", "Source", "Warning"]).count()["Count"])
 
-    # Aggregate by warning and reason
-    print("B. Warnings found by category:")
-    print(filtered.groupby(["Warning", "Category", "Reason"]).count()["Count"])
+    # Aggregate by warning and reason (table 3)
+    print("Warnings found by category:")
+    print(filtered.groupby(["Warning", "Category"]).count()["Count"])
 
-    # Aggregate by warning and reason
-    print("C. Warnings found by source:")
-    print(filtered.groupby(["Warning", "Category", "Source"]).count()["Count"])
+    # Aggregate by source and category
+    print("Categories found by source:")
+    print(filtered.groupby(["Source", "Category"]).count()["Count"])
 
+    # Aggregate by project and category (table 4)
+    print("Top warnings per project:")
+    print(filtered.groupby(["Project", "Warning", "Category"]).count()["Count"])
